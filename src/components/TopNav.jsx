@@ -10,7 +10,7 @@ export default function TopNav() {
       <div className="flex max-w-screen-xl w-full mx-auto justify-between py-2 md:px-0 px-4">
         <div>
           <a href="/" className="text-xl font-bold">
-            Github User Search
+            Notes
           </a>
         </div>
 
