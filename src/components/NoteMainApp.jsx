@@ -38,7 +38,13 @@ let NoteMainApp = () => {
   ];
   return (
     <div className="my-4 px-4 border max-w-screen-xl mx-auto">
-      {notesTemplate.length}  <i className="text-[#999999]">Saved</i> Notes Available:
+      <div>
+        Add a new note
+      </div>
+      <div>
+
+      {notesTemplate.length}  <i className="text-[#999999]">Saved</i> Notes Available: 
+      </div>
       <div className="grid grid-cols-2">
 
       {notesTemplate.map((note) => (
