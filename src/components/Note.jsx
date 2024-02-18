@@ -17,7 +17,8 @@ let Note=({noteData})=> {
             //   setFocusedNote(note.id);
             // }}
             onClick={()=>{
-              localStorage.setItem(`data${noteData.id}`, noteData.content)}}
+              let stringifiedNoteData = JSON.stringify(noteData);
+              localStorage.setItem(`data${noteData.id}`, stringifiedNoteData)}}
           >
             Note {noteData.id}
             <h1 className=" text-xl">{noteData.title}</h1>
