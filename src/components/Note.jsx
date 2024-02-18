@@ -16,6 +16,8 @@ let Note=({noteData})=> {
             //   setFocusNote(true);
             //   setFocusedNote(note.id);
             // }}
+            onClick={()=>{
+              localStorage.setItem(`data${noteData.id}`, noteData.content)}}
           >
             Note {noteData.id}
             <h1 className=" text-xl">{noteData.title}</h1>
