@@ -1,6 +1,6 @@
 let Note=({noteData})=> {
     return (<>
-              <div
+              {/* <div
           aria-label="backdrop"
           className=" fixed inset-0 z-40 bg-black/20 backdrop-blur-[1px] dark:bg-slate-900/80"
         ></div>
@@ -8,7 +8,19 @@ let Note=({noteData})=> {
             {noteData.id}
         <h1 className=" text-xl">{noteData.title}</h1>
         <span>Note: {noteData.content}</span>
-      </div>
+      </div> */}
+      
+      <div
+            className="p-4 border my-2 h-[0%] overflow-y-hidden"
+            // onClick={() => {
+            //   setFocusNote(true);
+            //   setFocusedNote(note.id);
+            // }}
+          >
+            Note {noteData.id}
+            <h1 className=" text-xl">{noteData.title}</h1>
+            <span>Note: {noteData.content}</span>
+          </div>
       </>
     );
 }

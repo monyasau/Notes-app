@@ -37,21 +37,11 @@ let NoteMainApp = () => {
     },
   ];
   return (
-    <div className="my-4 px-4 border">
+    <div className="my-4 px-4 border max-w-screen-md mx-auto">
       {notesTemplate.length} Notes Available:
       {notesTemplate.map((note) => (
         <div key={note.id}>
-          <div
-            className="p-4 border my-2 h-[20vh] overflow-y-hidden"
-            onClick={() => {
-              setFocusNote(true);
-              setFocusedNote(note.id);
-            }}
-          >
-            Note {note.id}
-            <h1 className=" text-xl">{note.title}</h1>
-            <span>Note: {note.content}</span>
-          </div>
+          <Note noteData={note}/>
         </div>
       ))}
       {focusNote ? <Note noteData={notesTemplate[focusedNote]} /> : <></>}
@@ -60,3 +50,15 @@ let NoteMainApp = () => {
 };
 
 export default NoteMainApp;
+
+{/* <div
+className="p-4 border my-2 h-[20vh] overflow-y-hidden"
+onClick={() => {
+  setFocusNote(true);
+  setFocusedNote(note.id);
+}}
+>
+Note {note.id}
+<h1 className=" text-xl">{note.title}</h1>
+<span>Note: {note.content}</span>
+</div> */}
