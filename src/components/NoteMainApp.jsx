@@ -9,7 +9,7 @@ let NoteMainApp = () => {
       id: 1,
       title: "Note title",
       content:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deserunt aliquam sit eaque nam soluta assumenda maxime deleniti fuga cum eligendi recusandae alias, quibusdam optio sint facilis voluptatibus blanditiis adipisci?",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.blanditiis adipisci?",
     },
     {
       id: 2,
@@ -37,13 +37,16 @@ let NoteMainApp = () => {
     },
   ];
   return (
-    <div className="my-4 px-4 border max-w-screen-md mx-auto">
+    <div className="my-4 px-4 border max-w-screen-xl mx-auto">
       {notesTemplate.length} Notes Available:
+      <div className="grid grid-cols-2">
+
       {notesTemplate.map((note) => (
         <div key={note.id}>
           <Note noteData={note}/>
         </div>
       ))}
+      </div>
       {focusNote ? <Note noteData={notesTemplate[focusedNote]} /> : <></>}
     </div>
   );
