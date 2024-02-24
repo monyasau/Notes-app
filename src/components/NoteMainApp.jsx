@@ -38,7 +38,7 @@ let NoteMainApp = () => {
   ];
   return (
     <>
-      <div className="my-4 p-4 border bg-slate-50 max-w-screen-xl mx-auto">
+      <div className="my-4 p-4 border grid grid-cols-2 bg-slate-50 max-w-screen-xl mx-auto">
         <div aria-label="title" className="flex bg-white rounded p-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +52,7 @@ let NoteMainApp = () => {
         </svg>
 <input type="text" className="w-full focus:outline-none" />
         </div>
+
       </div>
       <div className="my-4 px-4 border max-w-screen-xl mx-auto">
         <div>
