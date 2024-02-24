@@ -52,7 +52,9 @@ let NoteMainApp = () => {
         </svg>
 <input type="text" className="w-full focus:outline-none" />
         </div>
-
+<div>
+  
+</div>
       </div>
       <div className="my-4 px-4 border max-w-screen-xl mx-auto">
         <div>
