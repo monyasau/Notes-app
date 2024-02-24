@@ -11,7 +11,7 @@ let Note=({noteData})=> {
       </div> */}
       
       <div
-            className="p-4 border my-2 h-[0%] overflow-y-hidden"
+            className="p-4 border my-2 min-h-[200px] max-h-[200px] overflow-y-scroll"
             // onClick={() => {
             //   setFocusNote(true);
             //   setFocusedNote(note.id);
