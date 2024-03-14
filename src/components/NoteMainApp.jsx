@@ -37,30 +37,33 @@ let NoteMainApp = () => {
     },
   ];
   return (
-    <div className="my-4 px-4 border max-w-screen-xl mx-auto">
-      <div>
-        Add a new note
+    <>
+      <div className="my-4 px-4 border max-w-screen-xl mx-auto">
+        <span>Add a new note</span>
+        <div></div>
       </div>
-      <div>
-
-      {notesTemplate.length}  <i className="text-[#999999]">Saved</i> Notes Available: 
-      </div>
-      <div className="grid grid-cols-2">
-
-      {notesTemplate.map((note) => (
-        <div key={note.id}>
-          <Note noteData={note} />
+      <div className="my-4 px-4 border max-w-screen-xl mx-auto">
+        <div>
+          {notesTemplate.length} <i className="text-[#999999]">Saved</i> Notes
+          Available:
         </div>
-      ))}
+        <div className="grid grid-cols-2">
+          {notesTemplate.map((note) => (
+            <div key={note.id}>
+              <Note noteData={note} />
+            </div>
+          ))}
+        </div>
+        {focusNote ? <Note noteData={notesTemplate[focusedNote]} /> : <></>}
       </div>
-      {focusNote ? <Note noteData={notesTemplate[focusedNote]} /> : <></>}
-    </div>
+    </>
   );
 };
 
 export default NoteMainApp;
 
-{/* <div
+{
+  /* <div
 className="p-4 border my-2 h-[20vh] overflow-y-hidden"
 onClick={() => {
   setFocusNote(true);
@@ -70,4 +73,5 @@ onClick={() => {
 Note {note.id}
 <h1 className=" text-xl">{note.title}</h1>
 <span>Note: {note.content}</span>
-</div> */}
+</div> */
+}
