@@ -5,6 +5,13 @@ let Note = ({ noteData }) => {
   let deStringifiedNoteData = JSON.parse(localStorage.getItem(`data${noteData.id}`))
   const [saved,setSaved]=useState(noteData.id)
 
+  useEffect(() => {
+    deStringifiedNoteData && noteData.content==deStringifiedNoteData.content?
+          setSaved("saved")
+        :
+        setSaved("Unsaved")
+  }, [saved])
+ 
   
   return (
     <>
