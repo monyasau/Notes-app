@@ -2,8 +2,6 @@ import { useState } from "react";
 import Note from "./Note";
 
 let NoteMainApp = () => {
-  const [focusNote, setFocusNote] = useState(false);
-  const [focusedNote, setFocusedNote] = useState(null);
   const [noteList,setNoteList] =useState( [
     {
       id: 1,
@@ -87,7 +85,6 @@ let NoteMainApp = () => {
             </div>
           ))}
         </div>
-        {focusNote ? <Note noteData={noteList[focusedNote]} /> : <></>}
       </div>
     </>
   );
