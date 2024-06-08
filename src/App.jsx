@@ -1,12 +1,12 @@
 import NoteMainApp from "./components/NoteMainApp"
-import TopNav from "./components/TopNav"
+import Footer from "./components/Footer"
 
 function App() {
 
   return (
     <>
-    <TopNav/>
     <NoteMainApp/>
+    <Footer/>
     </>
   )
 }
