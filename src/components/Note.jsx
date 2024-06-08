@@ -1,4 +1,11 @@
+import { useEffect, useState } from "react";
+
 let Note = ({ noteData }) => {
+  let stringifiedNoteData = JSON.stringify(noteData);
+  let deStringifiedNoteData = JSON.parse(localStorage.getItem(`data${noteData.id}`))
+  const [saved,setSaved]=useState(noteData.id)
+
+  
   return (
     <>
       {/* <div
@@ -12,24 +19,50 @@ let Note = ({ noteData }) => {
       </div> */}
 
       <div
-        className="p-4 border my-2 min-h-[200px] max-h-[200px] overflow-y-scroll"
+        className="p-4 overflow-hidden border h-[150px] my-2 "
         // onClick={() => {
         //   setFocusNote(true);
         //   setFocusedNote(note.id);
         // }}
       >
+        <div className="flex gap-2 justify-between items-center" aria-label="controls">
         <button
           onClick={() => {
-            let stringifiedNoteData = JSON.stringify(noteData);
             localStorage.setItem(`data${noteData.id}`, stringifiedNoteData);
+            setSaved(true)
           }}
-          className="border p-2 mr-3"
+          className="border hover:bg-purple-50  py-2 px-8 "
         >
-          Add to local storage
+          Save
         </button>
-        Note {noteData.id}
+          {/* {deStringifiedNoteData && noteData.content==deStringifiedNoteData.content?
+          "lldl"
+        :
+        saved.toString()} */}
+        {
+saved
+        }
+        <button
+          onClick={() => {
+            localStorage.removeItem(`data${noteData.id}`, stringifiedNoteData);
+            setSaved(false)
+
+          }}
+          className="border hover:bg-purple-50 py-2 px-8 "
+        >
+
+          Delete
+        </button>
+        
+        {/* Note {noteData.id} */}
+
+        </div>
         <h1 className=" text-xl">{noteData.title}</h1>
-        <span>Note: {noteData.content}</span>
+        <span className="" title="preview">Note: {noteData.content.length>100?
+        noteData.content.substring(0,99)+"......."
+        :
+        noteData.content}</span>
+        
       </div>
     </>
   );
