@@ -39,6 +39,9 @@ let NoteMainApp = () => {
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deserunt aliquam sit eaque nam soluta assumenda maxime deleniti fuga cum eligendi recusandae alias, quibusdam optio sint facilis voluptatibus blanditiis adipisci?",
     },
   ]);
+  const removeNote =(id)=>{
+
+  }
   return (
     <>
       <div className="my-4 p-4 rounded border gap-2 bg-purple-200 grid grid-cols-2 max-w-screen-sm mx-auto">
